@@ -29,7 +29,7 @@
   </head>
   <body data-spy="scroll" data-target="#toc" data-offset="50">
     
-    <nav class="navbar navbar-expand navbar-dark bg-dark" style="">
+    <nav class="navbar navbar-expand">
       <ul class="navbar-nav">
         <li class="nav-item ">
           <a class="nav-link" href="https://hayatoito.github.io/">hayato</a>
@@ -676,13 +676,13 @@ Program にコンパイルしている人が多かった気が。</p>
 <p>そう思っていた時期がありました。しかし、Rust は <code>&lt;crate_root&gt;/src/bin</code> 以下に
 <code>*.rs</code> ファイルをおいておくだけで、それぞれの <code>*.rs</code> をビルドして別の実行ファイルをつくってくれます。たとえば my-hello-world &quot;スクリプト&quot; を書きたいと思ったら
 <code>&lt;crate_root&gt;/src/bin/my-hello-world.rs</code> においておけば開発中は:</p>
-<pre><code>&gt; cargo run --bin my-hello-world [args...]
+<pre><code class="language-shell prettyprint">% cargo run --bin my-hello-world [args...]
 </code></pre>
 <p>ですぐにテスト実行できます。 <code>&lt;crate_root&gt;/target/release</code> に PATH を通しておけば</p>
-<pre><code>&gt; cargo build --release
+<pre><code class="language-shell prettyprint">% cargo build --release
 </code></pre>
 <p>と必要に応じてまとめてビルドしておくだけで、普段は</p>
-<pre><code>&gt; my-hello-world
+<pre><code class="language-shell prettyprint">% my-hello-world
 </code></pre>
 <p>で普通に呼び出せるので完全にスクリプト感覚で使用できます。
 <code>&lt;crate_root&gt;/src/bin</code> の仕組みがなかったら、普段使いの&quot;スクリプト&quot;言語として
@@ -866,7 +866,7 @@ Objective-C を書く人を除くと）Emacs を使う人がほとんどです�
 <h2 id="emacs-el"><a class="self-link" href="#emacs-el">Emacs の設定ファイルが 1 万行くらいあると聞いたのですがほんとうですか？ </a></h2>
 <p>一時期そういう噂が流れましたが、いまはぐっと減っていると思います。安心してください。</p>
 <p><code>&lt;2016-12-15 Thu&gt;</code> 数えてみたところ、たったの 5,000 行でした。</p>
-<pre><code class="language-shell prettyprint">$ wc emacs/*.el
+<pre><code class="language-shell prettyprint">% wc emacs/*.el
      330    1412   17854 emacs/custom.el
      471    1166   13912 emacs/emacs.el
       17      52     459 emacs/my-ace-window.el
@@ -1257,6 +1257,8 @@ Amazon.com などでの順位が高くて、びっくりした覚えがありま
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/rust.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

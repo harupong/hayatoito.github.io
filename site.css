@@ -1,41 +1,19 @@
+/* TODO(hayato): Use CSS variables */
+
 body {
-  padding-bottom: 1rem;
   color: #fff;
   background-color: #222;
+  padding-bottom: 1rem;
 }
 
-.bg-dark {
-  background-color: #333 !important;
+p {
+  margin: 1rem 0;
 }
 
-tbody {
-}
-.table {
-  color: #fff;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-
-.table td,
-.table th {
-  /* border-top: 1px solid #666; */
-  border-top: 0;
-  border-bottom: 0;
-}
-
-.table thead th {
-  /* border-bottom: 1px solid #666; */
-  border-top: 0;
-  border-bottom: 0;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #333;
-}
-
+/* navbar */
 .navbar {
-  margin-bottom: 1.5rem;
-  padding: 0rem 1rem;
+  padding: 0 1rem;
+  background-color: #333 !important;
 }
 
 .nav-link {
@@ -56,8 +34,80 @@ a.nav-link:focus {
   border-bottom: 2px solid #63b8ff;
 }
 
+/* table */
+thead > tr > td {
+  font-weight: bold;
+}
+
+.table {
+  color: #fff;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.table td,
+.table th,
+.table thead th {
+  border: 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #333;
+}
+
+/* Message boxes. Borrows from bootstrap's document */
+.article-info,
+.article-danger {
+  background-color: #333;
+  border: 1px solid #666;
+  border-left-width: 2px;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.article-info {
+  border-left-color: #63b8ff;
+}
+.article-danger {
+  border-left-color: #ff6a6a;
+}
+
+/* header and footers */
 .page-header {
-  margin-top: 1rem;
+  margin: 1rem 0;
+}
+
+article .site-article-title,
+.site-page .site-page-title {
+  font-size: 2rem;
+}
+
+article h1,
+.site-page h1 {
+  font-size: 1.8rem;
+  margin-top: 2em;
+}
+
+article header h1,
+.site-page h1:nth-child(1) {
+  margin-top: 1em;
+}
+
+h1.timeline-year {
+  margin-top: 0.5em;
+}
+
+article h2,
+.site-page h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.base-footer {
+  color: #ccc;
+}
+
+.site-footnote-title {
   margin-bottom: 1rem;
 }
 
@@ -65,80 +115,15 @@ article img[src$=".svg"] {
   background-color: #fff;
 }
 
-/* My own class. borrowed from bootstrap's document */
-.article-info,
-.article-danger {
-  background-color: #333;
-  border: 1px solid #666;
-  border-left-width: 3px;
-  margin-top: -5px;
-  margin: 20px 0;
-  padding: 20px;
-}
-
-.article-info {
-  border-left-color: #1b809e;
-}
-.article-danger {
-  border-left-color: #ce4844;
-}
-
-/* for pages and articles */
-.page-header {
-  border-bottom: 0;
-}
-
-article > header .post-date {
-  color: gray;
-}
-
-article .site-article-title,
-.site-page .site-page-title {
-  border-bottom: 0;
-  font-size: 2rem;
-  padding-top: 0;
-}
-
-article h1,
-.site-page > h1 {
-  padding-top: 0.5em;
-  font-size: 1.8rem;
-}
-
-article h2,
-.site-page h2 {
-  padding-top: 0.5rem;
-  font-size: 1.4rem;
-}
-
-article h1,
-.site-page > h1,
-article h2,
-.site-page h2 {
-  padding-bottom: 0.3rem;
-  /* border-bottom: 1px solid #666; */
-}
-
-.base-footer {
-  color: #ccc;
-}
-
-blockquote p {
-  font-size: 14px;
-}
-
-.social {
-  margin-top: 3rem;
-}
-
-.site-footnote-title {
-  margin-bottom: 1rem;
+hr {
+  border-top: 1px solid #666;
 }
 
 a {
   color: #63b8ff;
   text-decoration: none;
 }
+
 a:hover,
 a:focus {
   color: #63b8ff;
@@ -148,47 +133,30 @@ a:focus {
 blockquote {
   background-color: #333;
   border: 1px solid #666;
-  padding: 1rem 1rem 0;
   border-left: 2px solid #deb887;
+  padding: 0 1rem;
 }
 
+/* code */
 code {
   color: #ffc0cb;
 }
 
 pre {
-  margin-bottom: 0;
+  border: 1px solid #666;
+  padding: 0.5rem;
+  background-color: #333;
+  margin: 1rem 0;
 }
 
 pre code {
   color: #fff;
 }
 
-.highlight {
-  border: 1px solid #666;
-  padding: 0.5rem;
-  background-color: #333;
-  margin-bottom: 0.5rem;
-}
-
-/* For site */
-/* From .highlight */
-pre {
-  border: 1px solid #666;
-  padding: 0.5rem;
-  background-color: #333;
-  margin-bottom: 0.5rem;
-}
-
-/* For site */
-/* From th: user agent stylesheet */
-thead > tr > td {
-  font-weight: bold;
-}
-
+/* self links */
 h1 > a.self-link,
 h2 > a.self-link {
-  color: white;
+  color: #fff;
 }
 
 h1 > a.self-link:hover,
@@ -201,15 +169,13 @@ h2 > a.self-link:hover::after {
   content: "\2002\00a7\2002";
 }
 
-/*
- * Table of Contents
- */
+/* table of contents */
 #toc {
   position: fixed;
 }
 
 #toc {
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 
 #toc nav {
@@ -257,7 +223,8 @@ h2 > a.self-link:hover::after {
 
 /* 2nd level (shown on .active) */
 #toc nav nav {
-  display: none; /* Hide by default, but at >768px, show it */
+  /* Hide by default, but at >768px, show it */
+  display: none;
 }
 
 /* Show 2nd level when 1st level is active */
@@ -274,133 +241,81 @@ h2 > a.self-link:hover::after {
   background-color: #3387cc;
 }
 
-/* Used with prettify.js.  */
-/* Borrows from  Doxy: https://raw.githack.com/google/code-prettify/master/styles/index.html  */
-/* string - burlywood */
-pre .str,
-code .str {
-  color: #deb887;
-}
-/* keyword - LightCyan3 */
-pre .kwd,
-code .kwd {
-  color: #b4cdcd;
-}
-/* comment - PaleGreen */
-pre .com,
-code .com {
-  color: #98fb98;
-}
-/* type - aquamarine */
-pre .typ,
-code .typ {
-  color: #7fffd4;
-}
-/* literal - MediumPurple1 */
-pre .lit,
-code .lit {
-  color: #ab82ff;
-}
-/* punctuation - lemon chiffon4  */
-pre .pun,
-code .pun {
-  color: #ccc;
-}
-/* plaintext - white */
-pre .pln,
-code .pln {
-  color: #fff;
-}
-/* html/xml tag  - bluey */
-pre .tag,
-code .tag {
-  color: #9c9cff;
-}
-/* html tag - bluey */
-pre .htm,
-code .htm {
-  color: #9c9cff;
-}
-/* xslt tag  light purply*/
-pre .xsl,
-code .xsl {
-  color: #d0a0d0;
-}
-/* html/xml attribute name  - pink */
-pre .atn,
-code .atn {
-  color: #ffc0cb;
-}
-/* html/xml attribute value - burlywood */
-pre .atv,
-code .atv {
-  color: #deb887;
-}
-/* decimal - blue */
-pre .dec,
-code .dec {
-  color: #3387cc;
+//* highlight.js */
+/* Borrows from https://github.com/highlightjs/highlight.js/blob/master/src/styles/rainbow.css */
+.hljs {
+  display: block;
+  overflow-x: auto;
 }
 
-/* print is mostly unchanged from default at present  */
-@media print {
-  pre.prettyprint,
-  code.prettyprint {
-    background-color: #fff;
-  }
-  pre .str,
-  code .str {
-    color: #088;
-  }
-  pre .kwd,
-  code .kwd {
-    color: #006;
-    font-weight: bold;
-  }
-  pre .com,
-  code .com {
-    color: #0c3;
-  }
-  pre .typ,
-  code .typ {
-    color: #404;
-    font-weight: bold;
-  }
-  pre .lit,
-  code .lit {
-    color: #044;
-  }
-  pre .pun,
-  code .pun {
-    color: #440;
-  }
-  pre .pln,
-  code .pln {
-    color: #000;
-  }
-  pre .tag,
-  code .tag {
-    color: #b66ff7;
-    font-weight: bold;
-  }
-  pre .htm,
-  code .htm {
-    color: #606;
-    font-weight: bold;
-  }
-  pre .xsl,
-  code .xsl {
-    color: #606;
-    font-weight: bold;
-  }
-  pre .atn,
-  code .atn {
-    color: #c71585;
-    font-weight: normal;
-  }
-  pre .atv,
-  code .atv {
-    color: #088;
-    font-weight: normal;
-  }
+.hljs-built_in,
+.hljs-deletion {
+  color: #ff6a6a;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta,
+.hljs-subst,
+.hljs-symbol,
+.hljs-link {
+  color: #04f97f;
+}
+
+.hljs-doctag {
+  color: #f0e68c;
+}
+
+.hljs-title,
+.hljs-name,
+.hljs-section {
+  color: #63b8ff;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #ab82ff;
+}
+
+.hljs-type {
+  color: #7fffd4;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #98fb98;
+}
+
+.hljs-string,
+.hljs-regexp {
+  color: #deb887;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-id,
+.hljs-class .hljs-title,
+.hljs-attr,
+.hljs-attribute {
+  color: #ffc0cb;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #b4cdcd;
+}
+
+.hljs-formula {
+  background: #eee8d5;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
 }

@@ -29,7 +29,7 @@
   </head>
   <body data-spy="scroll" data-target="#toc" data-offset="50">
     
-    <nav class="navbar navbar-expand navbar-dark bg-dark" style="">
+    <nav class="navbar navbar-expand">
       <ul class="navbar-nav">
         <li class="nav-item ">
           <a class="nav-link" href="https://hayatoito.github.io/">hayato</a>
@@ -99,8 +99,8 @@ otherwise, it is empty.</p>
 <p><em>manually-assigned-nodes</em> is an internal field. It is write-only. Users cannot
 read the value directly.</p>
 <h1 id="changes-to-html-standard"><a class="self-link" href="#changes-to-html-standard">Changes to HTML Standard</a></h1>
-<h2 id="htmlsltoelement"><a class="self-link" href="#htmlsltoelement">HTMLSltoElement</a></h2>
-<pre><code class="language-webidl prettyprint">partial interface HTMLSlotElement {
+<h2 id="htmlslotelement"><a class="self-link" href="#htmlslotelement">HTMLSlotElement</a></h2>
+<pre><code>partial interface HTMLSlotElement {
   ...
   void assign(sequence&lt;Node&gt; nodes)
 }
@@ -118,7 +118,7 @@ that <code>slot.assign(sequence&lt;Node&gt; nodes)</code> tell the engine <em>ca
 where <a href="https://dom.spec.whatwg.org/#slot-assigned-nodes">assigned nodes</a> are constructed.</p>
 <h1 id="changes-to-dom-standard"><a class="self-link" href="#changes-to-dom-standard">Changes to DOM Standard</a></h1>
 <h2 id="shadowrootinit"><a class="self-link" href="#shadowrootinit">ShadowRootInit</a></h2>
-<pre><code class="language-webidl prettyprint">ShadowRootInit {
+<pre><code>ShadowRootInit {
    ...
    (optional) sloting: 'manual'|'auto' //  (if omitted, it is 'auto');
 }
@@ -262,6 +262,8 @@ order doesn't matter?</p>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/rust.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
